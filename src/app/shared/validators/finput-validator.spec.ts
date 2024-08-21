@@ -1,4 +1,4 @@
-import { AbstractControl, FormControl, ValidationErrors } from '@angular/forms';
+import { AbstractControl, FormControl } from '@angular/forms';
 import { finputValidator } from './finput-validator'; // Update this path according to your project structure
 
 describe('finputValidator', () => {

@@ -2,8 +2,8 @@ import { Component, inject } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import FinputComponent from "./ui/finput.component";
 import { FinputService } from "../shared/data-access/finput.service";
-import { finputValidator } from "./ui/finput-validator";
 import { RouterLink } from "@angular/router";
+import { finputValidator } from "../shared/validators/finput-validator";
 
 @Component({
     standalone: true,
