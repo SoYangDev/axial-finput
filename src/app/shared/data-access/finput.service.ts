@@ -1,7 +1,7 @@
 import { computed, Injectable, signal } from "@angular/core";
 import { Subject } from "rxjs";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { FinancialSuffixMap } from "../interfaces/financial-number";
+import { FinancialNumberSuffix, FinancialSuffixMap } from "../interfaces/financial-number";
 
 interface FinancialNumberState {
     finValue: string
@@ -21,7 +21,7 @@ export class FinputService {
 
     convertedValue = computed(() => {
         const [num, suffix] = this.state().finValue.split(/(?=[a-zA-Z])/)
-        return !num ? null :  Number(num) * FinancialSuffixMap[suffix];
+        return !num ? null :  Number(num) * FinancialSuffixMap[suffix as FinancialNumberSuffix];
     })
     
     // actions
